@@ -12,7 +12,7 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center p-4 bg-center bg-cover bg-[url(../../../public/images/bg.jpeg)]">
+    <div className="flex h-screen w-screen items-center justify-center p-4 bg-center bg-cover bg-[url('/images/bg.jpeg')]">
       <div className="border-2 border-emerald-800 rounded-2xl w-full max-w-md flex flex-col justify-center items-center p-6 h-1/2 backdrop-blur-md">
         <form
           onSubmit={(e) => {
