@@ -12,8 +12,8 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center p-4">
-      <div className="border-2 border-emerald-500 rounded-2xl w-full max-w-md flex flex-col justify-center items-center p-6 h-1/2">
+    <div className="flex h-screen w-screen items-center justify-center p-4 bg-center bg-cover bg-[url(../../../public/images/bg.jpeg)]">
+      <div className="border-2 border-emerald-800 rounded-2xl w-full max-w-md flex flex-col justify-center items-center p-6 h-1/2 backdrop-blur-md">
         <form
           onSubmit={(e) => {
             submitHandler(e);
@@ -28,7 +28,7 @@ const Login = (props) => {
             required
             type="email"
             placeholder="Enter your email"
-            className="border-2 border-emerald-500 bg-transparent outline-none rounded-full py-4 px-6 text-base md:text-xl placeholder:text-gray-400 w-full"
+            className="border-2 border-emerald-500 bg-transparent outline-none rounded-full py-4 px-6 text-base md:text-xl placeholder:text-black text-black w-full"
           />
           <input
             value={password}
@@ -38,9 +38,9 @@ const Login = (props) => {
             required
             type="password"
             placeholder="Enter password"
-            className="border-2 border-emerald-500 bg-transparent outline-none rounded-full py-4 px-6 text-base md:text-xl placeholder:text-gray-400 mt-3 w-full"
+            className="border-2 border-emerald-500 bg-transparent outline-none rounded-full py-4 px-6 text-base md:text-xl placeholder:text-black text-black mt-3 w-full"
           />
-          <button className="border-none bg-emerald-500 outline-none rounded-full py-3 px-10 md:px-20 text-white text-base md:text-xl mt-7 w-full">
+          <button className="border-none bg-emerald-500 outline-none rounded-full py-3 px-10 md:px-20 text-black text-base md:text-xl mt-7 w-full">
             Log In
           </button>
         </form>

@@ -5,14 +5,14 @@ const employees = [
     email: "e@e.com",
     password: "123",
     taskCount: {
-      active: 3,
-      newTask: 3,
+      active: 1,
+      newTask: 2,
       completed: 5,
       failed: 2,
     },
     tasks: [
       {
-        active: true,
+        active: false,
         newTask: true,
         completed: false,
         failed: false,
@@ -46,7 +46,7 @@ const employees = [
       },
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         taskTitle: "Backup Databases",
@@ -100,7 +100,7 @@ const employees = [
         priority: "low",
       },
       {
-        active: true,
+        active: false,
         newTask: true,
         completed: false,
         failed: false,
@@ -544,7 +544,7 @@ const employees = [
       },
       {
         active: true,
-        newTask: true,
+        newTask: false,
         completed: false,
         failed: false,
         taskTitle: "Improve Landing Page",
