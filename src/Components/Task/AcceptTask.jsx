@@ -2,7 +2,7 @@ import React from 'react'
 
 const AcceptTask = ({task}) => {
   return (
-    <div className={`flex-shrink-0 bg-emerald-300 border-2 border-black text-black rounded-xl h-full w-[90%]  lg:w-[23%]`}>
+    <div className={`flex-shrink-0 bg-emerald-300 border-2 border-black text-black rounded-xl h-full w-[90%] sm:h-[110%]  md:w-[43%] lg:w-[23%]`}>
         <div className="flex p-5 justify-between items-center  ">
           <h3
             className={`text-base font-semibold  py-1 px-3 rounded`}

@@ -7,14 +7,20 @@ import CompleteTask from "../Task/CompleteTask";
 
 const TaskList = ({ data }) => {
   const callme = (task, idx) => {
-    if (task.active) {
-      return <AcceptTask task={task} />;
+    
+    try {
+      if(task==null){}
+      else if (task.active) {
+      return <AcceptTask key={idx} task={task} />;
     } else if (task.newTask) {
-      return <NewTask task={task} />;
+      return <NewTask key={idx} task={task} />;
     } else if (task.completed == true) {
-      return <CompleteTask task={task} />;
+      return <CompleteTask key={idx} task={task} />;
     } else {
-      return <FailedTask task={task} />;
+      return <FailedTask key={idx} task={task} />;
+    }
+    } catch (e) {
+      console.log(e);
     }
     // else {
     //   return <Card
@@ -38,7 +44,7 @@ const TaskList = ({ data }) => {
       <h1 className="mt-4 text-xl font-medium">All Tasks</h1>
       <div
         id="tasklist"
-        className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-3 sm:flex-row md:flex-row lg:flex lg:flex-row lg:overflow-x-auto  items-center justify-start flex-nowrap h-[55%] py-7 gap-10 w-full"
+        className="flex flex-col sm:grid sm:grid-cols-2 sm:flex-row md:flex md:flex-row md:overflow-x-auto  items-center justify-start flex-nowrap h-[55%] py-7 gap-10 w-full"
       >
         {data.tasks.map((task, idx) => callme(task, idx))}
       </div>
